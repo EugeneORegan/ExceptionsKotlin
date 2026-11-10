@@ -19,20 +19,21 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         var today = 20241203
         var then = 20241103
+
         /**
          * Exception Handling
          * try ... catch blocks
          * 1. Try this code (which may be dangerous
          * 2. Catch the exception
          */
-
+        var isLightOn = true
         try {
             /**
              *  a.  Precondition Function - If false, a specific
              *  Exception (in this case IllegalArgumentException)
              *  will be provoked.
              */
-
+            check(isLightOn) { "Light is off" }
             require(2 < 0) { "Code is wrong here" }
             /**
              * b. This block of code will throw the custom exception
